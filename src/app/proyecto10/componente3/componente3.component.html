@@ -1,0 +1,23 @@
+<section class="row">
+    <section class="col-6">
+        <section class="card w-50 mx-auto mt-5">
+            <section class="card-body text-center">
+            <input type="text" class="form-control mb-3" name="tarea" placeholder="Ingresa nombre de la Tarea" [(ngModel)]="tarea">
+            <textarea class="form-control" rows="5" placeholder="Ingresa descripción" name="descripcion" [(ngModel)]="descripcion"></textarea>
+            <button [disabled]="" class="btn btn-primary mt-5" (click)="Agregar()">Guardar</button>
+            </section>
+        </section>
+    </section>
+    <section class="col-6">
+        <section class="card card-lg w-50 mx-auto mt-5">
+            <section class="card-body text-center">
+                <h3>Tareas</h3>
+                    <section>
+                        <ul>
+                        <li *ngFor="let fila of tareas">{{ fila.Nombre}} - {{ fila.Descripcion }}</li>
+                        </ul>
+                    </section>
+            </section>
+        </section>
+    </section>
+</section>
