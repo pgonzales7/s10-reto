@@ -6,15 +6,16 @@ import { Component} from '@angular/core';
   styleUrls: ['./componente3.component.css']
 })
 export class Componente3Component {
-  tarea = "";
-  descripcion = "";
-  deshabilitar = false;
-  tareas = new Array;
+  datos = new Array;
+  tarea = '';
+  descripcion = '';
   
   Agregar() {
-    if(this.tarea!=""){
-    this.tareas.push({ Nombre: this.tarea, Descripcion: this.descripcion });
+    if(this.tarea!= ''){
+    this.datos.push({tarea: this.tarea, Descripcion: this.descripcion });
     this.tarea = '';
-    this.descripcion = '';}
-    }
+    this.descripcion = '';
+  }
+  }
+ 
 }
